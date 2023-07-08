@@ -3,7 +3,9 @@ pipeline {
 
     stages {
         stage("folder") {
-            sh "pwd"
+            steps {
+                sh "pwd"
+            }
         }
         stage('Test') {
             steps {
