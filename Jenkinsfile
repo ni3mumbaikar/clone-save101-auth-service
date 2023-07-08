@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        dir("folder") {
+        stage("folder") {
             sh "pwd"
         }
         stage('Test') {
