@@ -2,14 +2,17 @@ pipeline {
     agent any
 
     stages {
+        dir("folder") {
+            sh "pwd"
+        }
         stage('Test') {
             steps {
-                bat "gradle clean test"
+                sh "gradle clean test"
             }
         }
         stage('Build'){
             steps{
-                bat "gradle build"
+                sh "gradle build"
             }
         }
     }
